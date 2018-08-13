@@ -1,6 +1,16 @@
 <ActionBar class="action-bar">
-    <Label class="action-bar-title" text="Home"></Label>
+    <Label class="action-bar-title" text="Cadastro"></Label>
 </ActionBar>
 
-<StackLayout class="page">
-</StackLayout>
+<GridLayout class="page">
+    <StackLayout class="cadastro-page" orientation="vertical">
+
+        <Image class="img" src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png"></Image>
+
+        <TextField class="styles-input" [(ngModel)]="name" hint="Nome: "></TextField>
+        <TextField class="styles-input" [(ngModel)]="email" hint="E-mail: "></TextField>
+        <TextField class="styles-input" [(ngModel)]="user" hint="Login: "></TextField>
+        <TextField class="styles-input" [(ngModel)]="password" hint="Senha: "></TextField>
+        <Button class="btn-cadastro" text="Cadastrar" (tap)="save()"></Button>
+    </StackLayout>
+</GridLayout>
