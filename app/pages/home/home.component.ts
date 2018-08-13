@@ -4,19 +4,26 @@ import {RouterExtensions} from "nativescript-angular";
 @Component({
     selector: "Home",
     moduleId: module.id,
-    templateUrl: "./home.component.html"
+    templateUrl: "./home.component.html",
+    styleUrls: ['home.css'],
 })
 export class HomeComponent implements OnInit {
 
-    constructor(public routerExtensions: RouterExtensions) {
-        // Use the component constructor to inject providers.
-    }
+    constructor(public routerExtensions: RouterExtensions) {}
 
-    ngOnInit(): void {
-        // Init your component properties here.
-    }
+    public user = {
+        user_login: '',
+        senha_login: '',
+    };
+
+    ngOnInit(): void {}
 
     cadastrar(){
         this.routerExtensions.navigate(['cadastro']);
+    }
+
+    login(){
+        console.log("user", this.user);
+        this.routerExtensions.navigate(['toMain']);
     }
 }

@@ -3,7 +3,17 @@
 </ActionBar>
 
 <GridLayout class="page">
+
     <StackLayout orientation="vertical">
-        <Button class="btn" text="Cadastre-se" (tap)="cadastrar()"></Button>
+
+        <TextField hint="Login" class="inputText" [ngModel]='user.user_login' (ngModelChange)='user.user_login = $event'></TextField>
+
+        <TextField hint="Senha" secure="true" class="inputText" [ngModel]='user.senha_login' (ngModelChange)='user.senha_login = $event'></TextField>
+
+        <Button class="button" text="Entrar" (tap)="login()"></Button>
+
+        <Button class="button cadastro" text="Cadastre-se" (tap)="cadastrar()"></Button>
+
     </StackLayout>
+
 </GridLayout>
