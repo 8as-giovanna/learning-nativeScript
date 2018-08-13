@@ -10,7 +10,8 @@ import { Component, OnInit } from "@angular/core";
 @Component({
     selector: "Cadastro",
     moduleId: module.id,
-    templateUrl: "./cadastro.component.html"
+    templateUrl: "./cadastro.component.html",
+    styleUrls: ['cadastro.css']
 })
 export class CadastroComponent implements OnInit {
     constructor() {
